@@ -41,15 +41,19 @@ const Splash = () => {
           Quote Generator
         </motion.h2>
       </div>
-      <button
-        className="bg-[#38E54D] w-[50%] px-5 py-5 text-5xl mt-10"
+      <motion.button
+        initial={{ x: 0, opacity: 0 }}
+        animate={{ x: 0, opacity: 1.0 }}
+        transition={{ delay: 1.9, duration: 1.9 }}
+        exit={{ x: 0, opacity: 0.5, transition: { duration: 0.5 } }}
+        className="text-[#38E54D] px-3 py-5 text-3xl mt-10 hover:bg-[#38E54D] hover:text-black hover:duration-300 ease-in-out border border-[#38E54D]"
         onClick={() => {
           sound();
           navigate("/home");
         }}
       >
-        hi
-      </button>
+        Ring a Ding Ding...
+      </motion.button>
     </div>
   );
 };
